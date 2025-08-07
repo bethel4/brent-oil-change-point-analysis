@@ -1,0 +1,474 @@
+[
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Tuple",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.dates",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.dates",
+        "description": "matplotlib.dates",
+        "detail": "matplotlib.dates",
+        "documentation": {}
+    },
+    {
+        "label": "pymc3",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pymc3",
+        "description": "pymc3",
+        "detail": "pymc3",
+        "documentation": {}
+    },
+    {
+        "label": "arviz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "arviz",
+        "description": "arviz",
+        "detail": "arviz",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "stats",
+        "importPath": "scipy",
+        "description": "scipy",
+        "isExtraImport": true,
+        "detail": "scipy",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "unittest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "unittest",
+        "description": "unittest",
+        "detail": "unittest",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "BayesianChangePointModel",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_log_returns",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "associate_events_with_change_point",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "quantify_price_impact",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "load_oil_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_events_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_statistical_metrics",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_impact_report",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "load_oil_data",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def load_oil_data(file_path: str = '../data/brent_oil_prices.csv') -> pd.DataFrame:\n    \"\"\"\n    Load Brent oil price data from CSV file.\n    Parameters:\n    -----------\n    file_path : str\n        Path to the CSV file containing oil price data\n    Returns:\n    --------\n    pd.DataFrame",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_events_data",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def load_events_data(file_path: str = '../data/geopolitical_events.csv') -> pd.DataFrame:\n    \"\"\"\n    Load geopolitical events data from CSV file.\n    Parameters:\n    -----------\n    file_path : str\n        Path to the CSV file containing events data\n    Returns:\n    --------\n    pd.DataFrame",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_data",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def preprocess_data(oil_df: pd.DataFrame, \n                   calculate_returns: bool = True) -> pd.DataFrame:\n    \"\"\"\n    Preprocess oil price data for analysis.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data\n    calculate_returns : bool\n        Whether to calculate log returns",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "plot_price_with_events",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def plot_price_with_events(oil_df: pd.DataFrame, \n                          events_df: pd.DataFrame,\n                          title: str = \"Brent Oil Prices with Major Events\",\n                          figsize: Tuple[int, int] = (14, 6)) -> None:\n    \"\"\"\n    Plot oil prices with annotated events.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "plot_returns_with_events",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def plot_returns_with_events(oil_df: pd.DataFrame, \n                           events_df: pd.DataFrame,\n                           title: str = \"Log Returns with Major Events\",\n                           figsize: Tuple[int, int] = (14, 6)) -> None:\n    \"\"\"\n    Plot log returns with annotated events.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price and log returns data",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_data_summary",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def get_data_summary(oil_df: pd.DataFrame, events_df: pd.DataFrame) -> dict:\n    \"\"\"\n    Get summary statistics for the datasets.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data\n    events_df : pd.DataFrame\n        DataFrame with events data\n    Returns:",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "filter_data_by_date_range",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def filter_data_by_date_range(oil_df: pd.DataFrame, \n                            start_date: Optional[str] = None,\n                            end_date: Optional[str] = None) -> pd.DataFrame:\n    \"\"\"\n    Filter oil price data by date range.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data\n    start_date : Optional[str]",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "get_events_in_period",
+        "kind": 2,
+        "importPath": "src.data_loader",
+        "description": "src.data_loader",
+        "peekOfCode": "def get_events_in_period(events_df: pd.DataFrame,\n                        start_date: str,\n                        end_date: str) -> pd.DataFrame:\n    \"\"\"\n    Get events that occurred within a specific time period.\n    Parameters:\n    -----------\n    events_df : pd.DataFrame\n        DataFrame with events data\n    start_date : str",
+        "detail": "src.data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "BayesianChangePointModel",
+        "kind": 6,
+        "importPath": "src.model",
+        "description": "src.model",
+        "peekOfCode": "class BayesianChangePointModel:\n    \"\"\"\n    Bayesian Change Point Detection Model using PyMC3.\n    This class implements a Bayesian model to detect structural breaks\n    in time series data, specifically designed for Brent oil price analysis.\n    \"\"\"\n    def __init__(self, data: pd.Series, dates: pd.Series):\n        \"\"\"\n        Initialize the model with time series data.\n        Parameters:",
+        "detail": "src.model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_log_returns",
+        "kind": 2,
+        "importPath": "src.model",
+        "description": "src.model",
+        "peekOfCode": "def calculate_log_returns(prices: pd.Series) -> pd.Series:\n    \"\"\"\n    Calculate log returns from price series.\n    Parameters:\n    -----------\n    prices : pd.Series\n        Price series\n    Returns:\n    --------\n    pd.Series",
+        "detail": "src.model",
+        "documentation": {}
+    },
+    {
+        "label": "associate_events_with_change_point",
+        "kind": 2,
+        "importPath": "src.model",
+        "description": "src.model",
+        "peekOfCode": "def associate_events_with_change_point(change_point_date: pd.Timestamp, \n                                    events_df: pd.DataFrame, \n                                    time_window_days: int = 180) -> pd.DataFrame:\n    \"\"\"\n    Find events near a detected change point.\n    Parameters:\n    -----------\n    change_point_date : pd.Timestamp\n        Date of the detected change point\n    events_df : pd.DataFrame",
+        "detail": "src.model",
+        "documentation": {}
+    },
+    {
+        "label": "quantify_price_impact",
+        "kind": 2,
+        "importPath": "src.model",
+        "description": "src.model",
+        "peekOfCode": "def quantify_price_impact(oil_df: pd.DataFrame, change_point_idx: int) -> Dict[str, float]:\n    \"\"\"\n    Quantify the price impact of a detected change point.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with 'Price' column\n    change_point_idx : int\n        Index of the change point\n    Returns:",
+        "detail": "src.model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_statistical_metrics",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def calculate_statistical_metrics(data: pd.Series) -> Dict[str, float]:\n    \"\"\"\n    Calculate comprehensive statistical metrics for a time series.\n    Parameters:\n    -----------\n    data : pd.Series\n        Time series data\n    Returns:\n    --------\n    Dict[str, float]",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "test_stationarity",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def test_stationarity(data: pd.Series, alpha: float = 0.05) -> Dict[str, Any]:\n    \"\"\"\n    Perform Augmented Dickey-Fuller test for stationarity.\n    Parameters:\n    -----------\n    data : pd.Series\n        Time series data\n    alpha : float\n        Significance level\n    Returns:",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "plot_change_point_analysis",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def plot_change_point_analysis(oil_df: pd.DataFrame, \n                             change_point_date: pd.Timestamp,\n                             events_df: pd.DataFrame = None,\n                             title: str = \"Change Point Analysis\") -> None:\n    \"\"\"\n    Create a comprehensive visualization of change point analysis.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_impact_report",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def generate_impact_report(oil_df: pd.DataFrame,\n                          change_point_date: pd.Timestamp,\n                          events_df: pd.DataFrame = None,\n                          time_window_days: int = 180) -> Dict[str, Any]:\n    \"\"\"\n    Generate a comprehensive impact report for the detected change point.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "save_results_to_json",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def save_results_to_json(results: Dict[str, Any], filename: str) -> None:\n    \"\"\"\n    Save analysis results to a JSON file.\n    Parameters:\n    -----------\n    results : Dict[str, Any]\n        Results dictionary to save\n    filename : str\n        Output filename\n    \"\"\"",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_summary_table",
+        "kind": 2,
+        "importPath": "src.utils",
+        "description": "src.utils",
+        "peekOfCode": "def create_summary_table(oil_df: pd.DataFrame,\n                        change_point_date: pd.Timestamp,\n                        events_df: pd.DataFrame = None) -> pd.DataFrame:\n    \"\"\"\n    Create a summary table for the analysis.\n    Parameters:\n    -----------\n    oil_df : pd.DataFrame\n        DataFrame with oil price data\n    change_point_date : pd.Timestamp",
+        "detail": "src.utils",
+        "documentation": {}
+    },
+    {
+        "label": "TestBayesianChangePointModel",
+        "kind": 6,
+        "importPath": "tests.test_model",
+        "description": "tests.test_model",
+        "peekOfCode": "class TestBayesianChangePointModel(unittest.TestCase):\n    \"\"\"Test cases for the Bayesian Change Point Model.\"\"\"\n    def setUp(self):\n        \"\"\"Set up test data.\"\"\"\n        # Create sample data\n        dates = pd.date_range('2020-01-01', periods=100, freq='D')\n        np.random.seed(42)\n        # Create synthetic price data with a change point\n        prices = np.concatenate([\n            np.random.normal(50, 5, 50),  # Before change point",
+        "detail": "tests.test_model",
+        "documentation": {}
+    },
+    {
+        "label": "TestDataLoader",
+        "kind": 6,
+        "importPath": "tests.test_model",
+        "description": "tests.test_model",
+        "peekOfCode": "class TestDataLoader(unittest.TestCase):\n    \"\"\"Test cases for data loading functions.\"\"\"\n    def test_oil_data_loading(self):\n        \"\"\"Test oil data loading.\"\"\"\n        # This test would require the actual data file\n        # For now, we'll test the function structure\n        try:\n            df = load_oil_data('../data/brent_oil_prices.csv')\n            self.assertIn('Date', df.columns)\n            self.assertIn('Price', df.columns)",
+        "detail": "tests.test_model",
+        "documentation": {}
+    },
+    {
+        "label": "TestUtils",
+        "kind": 6,
+        "importPath": "tests.test_model",
+        "description": "tests.test_model",
+        "peekOfCode": "class TestUtils(unittest.TestCase):\n    \"\"\"Test cases for utility functions.\"\"\"\n    def test_statistical_metrics(self):\n        \"\"\"Test statistical metrics calculation.\"\"\"\n        data = pd.Series([1, 2, 3, 4, 5])\n        metrics = calculate_statistical_metrics(data)\n        self.assertIn('mean', metrics)\n        self.assertIn('median', metrics)\n        self.assertIn('std', metrics)\n        self.assertIn('skewness', metrics)",
+        "detail": "tests.test_model",
+        "documentation": {}
+    }
+]
