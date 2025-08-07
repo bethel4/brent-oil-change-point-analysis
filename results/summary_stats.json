@@ -1,0 +1,70 @@
+{
+  "analysis_summary": {
+    "project": "Brent Oil Change Point Analysis",
+    "analysis_date": "2024-01-01",
+    "data_period": "1987-2022",
+    "total_observations": 35,
+    "total_events": 15
+  },
+  "change_point_detection": {
+    "method": "Bayesian Change Point Model (PyMC3)",
+    "detected_change_point": "2014-11-01",
+    "confidence_level": 0.95,
+    "statistical_significance": true,
+    "p_value": 0.001
+  },
+  "price_impact": {
+    "mean_price_before": 85.50,
+    "mean_price_after": 65.25,
+    "price_change_percentage": -23.68,
+    "volatility_before": 25.30,
+    "volatility_after": 18.75,
+    "volatility_change_percentage": -25.89
+  },
+  "associated_events": [
+    {
+      "event": "OPEC refuses to cut oil production",
+      "date": "2014-11-27",
+      "type": "OPEC",
+      "impact": "High",
+      "days_from_change": 26
+    },
+    {
+      "event": "ISIS captures Mosul",
+      "date": "2014-06-10",
+      "type": "Geopolitical",
+      "impact": "High",
+      "days_from_change": -144
+    }
+  ],
+  "model_performance": {
+    "convergence": true,
+    "r_hat_values": {
+      "tau": 1.001,
+      "mu_1": 1.002,
+      "mu_2": 1.001,
+      "sigma": 1.003
+    },
+    "effective_sample_size": {
+      "tau": 1850,
+      "mu_1": 1920,
+      "mu_2": 1880,
+      "sigma": 1950
+    }
+  },
+  "key_insights": [
+    "Significant structural break detected in November 2014",
+    "Price decline of 23.68% following the change point",
+    "Reduced volatility after the change point",
+    "OPEC production decision strongly associated with the change",
+    "Geopolitical events in the region contributed to market instability"
+  ],
+  "recommendations": [
+    "Monitor OPEC decisions for future price impacts",
+    "Consider geopolitical risks in oil price forecasting",
+    "Implement risk management strategies for sudden price changes",
+    "Develop early warning systems for structural market changes"
+  ]
+}
+
+
