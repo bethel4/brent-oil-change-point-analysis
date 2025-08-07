@@ -1,0 +1,16 @@
+date,event,type,impact
+2011-01-25,Arab Spring begins in Egypt,Geopolitical,High
+2014-06-10,ISIS captures Mosul,Geopolitical,High
+2014-11-27,OPEC refuses to cut oil production,OPEC,High
+2016-01-16,Lifting of Iran sanctions,Geopolitical,Medium
+2016-11-30,OPEC agrees to cut production,OPEC,High
+2017-06-05,Qatar diplomatic crisis,Geopolitical,Medium
+2018-05-08,US withdraws from Iran nuclear deal,Geopolitical,High
+2019-09-14,Attack on Saudi Aramco facilities,Geopolitical,High
+2020-03-08,Oil price war: Saudi Arabia vs Russia,OPEC,High
+2020-04-12,OPEC+ historic production cut,OPEC,High
+2021-03-23,Suez Canal blockage,Geopolitical,Medium
+2022-02-24,Russian invasion of Ukraine,Geopolitical,High
+2022-10-05,OPEC+ announces production cut,OPEC,High
+2023-04-02,OPEC+ surprise production cut,OPEC,Medium
+2023-10-07,Israel-Hamas conflict escalates,Geopolitical,Medium 
