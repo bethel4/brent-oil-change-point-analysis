@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brent Oil Change Point Analysis: A Data Science Journey</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #f8f9fa; color: #222; margin: 0; padding: 0; }
+    .container { max-width: 900px; margin: 40px auto; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); padding: 40px; }
+    h1, h2, h3 { color: #007bff; }
+    h1 { font-size: 2.5rem; margin-bottom: 0.5em; }
+    h2 { margin-top: 2em; }
+    h3 { margin-top: 1.5em; }
+    p, li { font-size: 1.1rem; line-height: 1.7; }
+    code, pre { background: #f4f4f4; border-radius: 4px; padding: 2px 6px; }
+    .highlight { background: #e3f2fd; border-left: 4px solid #007bff; padding: 0.5em 1em; margin: 1em 0; }
+    .section { margin-bottom: 2.5em; }
+    .img-center { display: block; margin: 2em auto; max-width: 100%; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .quote { font-style: italic; color: #555; border-left: 4px solid #007bff; padding-left: 1em; margin: 1.5em 0; }
+    .task-title { color: #343a40; font-size: 1.3em; margin-top: 1.5em; }
+    .footer { margin-top: 3em; color: #888; font-size: 0.95em; text-align: center; }
+    ul { margin-bottom: 1.5em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Brent Oil Change Point Analysis: Navigating the Tides of Geopolitics</h1>
+    <p class="quote">“In the world of energy, every headline can move markets. But which events truly change the game?”</p>
+    <p>
+      As a data scientist at <strong>Birhan Energies</strong>, I was tasked with a challenge: <strong>uncover how major geopolitical and OPEC events shape the story of Brent oil prices</strong>. This project is more than a technical exercise—it's a journey through data, uncertainty, and the real-world impact of global events on energy markets.
+    </p>
+
+    <h2>Business Need & Context</h2>
+    <div class="section">
+      <p>
+        The oil market is notoriously volatile. Investors, policymakers, and energy companies all crave clarity: <em>Which events matter most? How do they affect prices? Can we spot the turning points as they happen?</em> Our mission at Birhan Energies is to deliver actionable intelligence—insights that help clients manage risk, seize opportunity, and plan for the future.
+      </p>
+      <ul>
+        <li><strong>Investors</strong> want to anticipate price swings and maximize returns.</li>
+        <li><strong>Policymakers</strong> need to understand market shocks to ensure economic stability and energy security.</li>
+        <li><strong>Energy companies</strong> rely on accurate forecasts to plan operations and secure supply chains.</li>
+      </ul>
+    </div>
+
+    <h2>Task 1: Laying the Foundation</h2>
+    <div class="section">
+      <h3 class="task-title">Defining the Data Science Workflow</h3>
+      <ul>
+        <li>Clarified the business objective: <strong>linking major events to structural changes in Brent oil prices</strong>.</li>
+        <li>Outlined a workflow: data collection, cleaning, EDA, modeling, evaluation, and communication.</li>
+      </ul>
+      <h3 class="task-title">Building the Event Dataset</h3>
+      <ul>
+        <li>Researched and compiled a list of <strong>15 major geopolitical and OPEC events</strong> (e.g., OPEC production cuts, wars, sanctions).</li>
+        <li>Created a structured CSV with event dates, types, and estimated impact levels.</li>
+      </ul>
+      <h3 class="task-title">Initial EDA & Assumptions</h3>
+      <ul>
+        <li>Explored the Brent oil price time series (1987–2022), visualizing trends and annotating events.</li>
+        <li>Documented assumptions: event impact is subjective, correlation ≠ causation, and market reactions may lag events.</li>
+      </ul>
+      <div class="highlight">
+        <strong>Key Insight:</strong> Visual inspection revealed that many price jumps and drops align with major events, but not all events have the same impact.
+      </div>
+    </div>
+
+    <h2>Task 2: Change Point Modeling & Insight Generation</h2>
+    <div class="section">
+      <h3 class="task-title">Why Bayesian Change Point Analysis?</h3>
+      <p>
+        Traditional time series models often miss the <strong>structural breaks</strong> caused by real-world shocks. Bayesian change point detection allows us to <strong>statistically identify when the behavior of the price series changes</strong>—and to quantify our uncertainty about those moments.
+      </p>
+      <h3 class="task-title">Modeling Approach</h3>
+      <ul>
+        <li>Transformed prices to <strong>log returns</strong> for stationarity.</li>
+        <li>Implemented a <strong>Bayesian model in PyMC3</strong> to detect a single change point in the mean of log returns.</li>
+        <li>Ran MCMC sampling to estimate the most probable change point and its uncertainty.</li>
+        <li>Compared detected change points to the event list, quantifying the price impact before and after.</li>
+      </ul>
+      <div class="highlight">
+        <strong>Example Finding:</strong> In November 2014, the model detected a significant change point coinciding with OPEC's refusal to cut production—leading to a 23% price drop and reduced volatility.
+      </div>
+      <h3 class="task-title">Statistical Rigor</h3>
+      <ul>
+        <li>Checked model convergence (R-hat ≈ 1.0) and credible intervals.</li>
+        <li>Tested for statistical significance in mean/volatility changes.</li>
+        <li>Associated change points with events within a 6-month window, but noted that not all events cause detectable breaks.</li>
+      </ul>
+      <div class="highlight">
+        <strong>Key Insight:</strong> Not every headline moves the market, but some events—especially OPEC decisions and major conflicts—leave a clear statistical fingerprint.
+      </div>
+    </div>
+
+    <h2>Task 3: Building the Interactive Dashboard</h2>
+    <div class="section">
+      <h3 class="task-title">From Analysis to Action</h3>
+      <p>
+        To make these insights accessible, I built a <strong>dashboard application</strong> using Flask (backend) and React (frontend):
+      </p>
+      <ul>
+        <li><strong>Interactive charts</strong> show price trends, change points, and event impacts.</li>
+        <li><strong>APIs</strong> serve data and model results in real time.</li>
+        <li><strong>Users can filter events, explore statistics, and see how specific events align with price changes.</strong></li>
+      </ul>
+      <img src="dashboard_screenshot.png" alt="Dashboard Screenshot" class="img-center" />
+      <div class="highlight">
+        <strong>Key Features:</strong> Timeline visualization, change point detection, event impact analysis, and statistical summaries—all in a user-friendly interface.
+      </div>
+    </div>
+
+    <h2>Conclusions & Recommendations</h2>
+    <div class="section">
+      <ul>
+        <li><strong>OPEC decisions and major geopolitical events</strong> are the most likely to cause structural breaks in oil prices.</li>
+        <li><strong>Bayesian change point analysis</strong> provides a principled way to detect and quantify these shifts.</li>
+        <li><strong>Interactive dashboards</strong> empower stakeholders to explore, validate, and act on data-driven insights.</li>
+      </ul>
+      <p>
+        <strong>For investors:</strong> Monitor OPEC meetings and geopolitical hotspots for early warning of price regime shifts.<br>
+        <strong>For policymakers:</strong> Use change point analysis to inform risk management and energy security strategies.<br>
+        <strong>For analysts:</strong> Combine statistical models with domain knowledge for the best results.
+      </p>
+    </div>
+
+    <div class="footer">
+      &copy; 2024 Birhan Energies | Data Science by [Your Name]<br>
+      <em>Ready for Medium or PDF export. All code and dashboard available on GitHub.</em>
+    </div>
+  </div>
+</body>
+</html> 

@@ -1,5 +1,37 @@
 [
     {
+        "label": "Flask",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "jsonify",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "request",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "CORS",
+        "importPath": "flask_cors",
+        "description": "flask_cors",
+        "isExtraImport": true,
+        "detail": "flask_cors",
+        "documentation": {}
+    },
+    {
         "label": "pandas",
         "kind": 6,
         "isExtraImport": true,
@@ -15,6 +47,193 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "load_oil_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_events_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_oil_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "load_events_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "preprocess_data",
+        "importPath": "data_loader",
+        "description": "data_loader",
+        "isExtraImport": true,
+        "detail": "data_loader",
+        "documentation": {}
+    },
+    {
+        "label": "BayesianChangePointModel",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_log_returns",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "BayesianChangePointModel",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_log_returns",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "associate_events_with_change_point",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "quantify_price_impact",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "generate_impact_report",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_statistical_metrics",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_statistical_metrics",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
+        "label": "generate_impact_report",
+        "importPath": "utils",
+        "description": "utils",
+        "isExtraImport": true,
+        "detail": "utils",
         "documentation": {}
     },
     {
@@ -151,39 +370,6 @@
         "documentation": {}
     },
     {
-        "label": "json",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "json",
-        "description": "json",
-        "detail": "json",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
         "label": "unittest",
         "kind": 6,
         "isExtraImport": true,
@@ -193,93 +379,120 @@
         "documentation": {}
     },
     {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "label": "load_analysis_data",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data\n        oil_df = preprocess_data(oil_df, calculate_returns=True)\n        print(\"Data loaded successfully!\")",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "os",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "os",
-        "description": "os",
-        "detail": "os",
+        "label": "health_check",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def health_check():\n    \"\"\"Health check endpoint.\"\"\"\n    return jsonify({'status': 'healthy', 'message': 'Dashboard API is running'})\n@app.route('/api/data/oil-prices', methods=['GET'])\ndef get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Convert to JSON-serializable format\n    data = []",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "BayesianChangePointModel",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
+        "label": "get_oil_prices",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Convert to JSON-serializable format\n    data = []\n    for _, row in oil_df.iterrows():\n        data.append({\n            'date': row['Date'].strftime('%Y-%m-%d'),\n            'price': float(row['Price']),",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "calculate_log_returns",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
+        "label": "get_events",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_events():\n    \"\"\"Get geopolitical events data.\"\"\"\n    if events_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    data = []\n    for _, row in events_df.iterrows():\n        data.append({\n            'date': row['date'].strftime('%Y-%m-%d'),\n            'event': row['event'],\n            'type': row['type'],",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "associate_events_with_change_point",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
+        "label": "run_change_point_analysis",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def run_change_point_analysis():\n    \"\"\"Run change point analysis and return results.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Get parameters from request\n        data = request.get_json() or {}\n        samples = data.get('samples', 2000)\n        tune = data.get('tune', 1000)\n        # Run Bayesian change point detection",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "quantify_price_impact",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
+        "label": "get_statistics",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_statistics():\n    \"\"\"Get statistical summary of the data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Calculate statistics\n    price_stats = calculate_statistical_metrics(oil_df['Price'])\n    returns_stats = calculate_statistical_metrics(oil_df['log_returns'])\n    return jsonify({\n        'price_statistics': price_stats,\n        'returns_statistics': returns_stats,",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "load_oil_data",
-        "importPath": "data_loader",
-        "description": "data_loader",
-        "isExtraImport": true,
-        "detail": "data_loader",
+        "label": "get_events_impact",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_events_impact():\n    \"\"\"Analyze impact of events on oil prices.\"\"\"\n    if oil_df is None or events_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Calculate price changes around events\n    event_impacts = []\n    for _, event in events_df.iterrows():\n        event_date = event['date']\n        # Find closest price data to event\n        closest_idx = (oil_df['Date'] - event_date).abs().idxmin()",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "load_events_data",
-        "importPath": "data_loader",
-        "description": "data_loader",
-        "isExtraImport": true,
-        "detail": "data_loader",
+        "label": "get_price_timeline",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_price_timeline():\n    \"\"\"Get data for price timeline visualization.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Prepare timeline data\n    timeline_data = []\n    for _, row in oil_df.iterrows():\n        timeline_data.append({\n            'date': row['Date'].strftime('%Y-%m-%d'),\n            'price': float(row['Price']),",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "preprocess_data",
-        "importPath": "data_loader",
-        "description": "data_loader",
-        "isExtraImport": true,
-        "detail": "data_loader",
+        "label": "get_change_point_visualization",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_change_point_visualization():\n    \"\"\"Get data for change point analysis visualization.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Run a quick change point analysis for visualization\n        log_returns = oil_df['log_returns'].values\n        model = BayesianChangePointModel(log_returns, oil_df['Date'])\n        trace = model.fit(samples=1000, tune=500)  # Quick run for visualization\n        change_point_idx, change_point_date = model.get_change_point()",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "calculate_statistical_metrics",
-        "importPath": "utils",
-        "description": "utils",
-        "isExtraImport": true,
-        "detail": "utils",
+        "label": "app",
+        "kind": 5,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  # Enable CORS for React frontend\n# Global variables to store loaded data\noil_df = None\nevents_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
-        "label": "generate_impact_report",
-        "importPath": "utils",
-        "description": "utils",
-        "isExtraImport": true,
-        "detail": "utils",
+        "label": "oil_df",
+        "kind": 5,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "oil_df = None\nevents_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "events_df",
+        "kind": 5,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "events_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "model_results",
+        "kind": 5,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "model_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data\n        oil_df = preprocess_data(oil_df, calculate_returns=True)",
+        "detail": "dashboard.backend.app",
         "documentation": {}
     },
     {
