@@ -105,6 +105,7 @@ const Dashboard = () => {
               </Card.Text>
             </Card.Body>
           </Card>
+        </Col>
         
         <Col md={3}>
           <Card className="text-center">

@@ -95,6 +95,7 @@ const EventsImpact = () => {
               </Card.Text>
             </Card.Body>
           </Card>
+        </Col>
         
         <Col md={3}>
           <Card className="text-center">
@@ -105,6 +106,7 @@ const EventsImpact = () => {
               </Card.Text>
             </Card.Body>
           </Card>
+        </Col>
         
         <Col md={3}>
           <Card className="text-center">
@@ -115,6 +117,7 @@ const EventsImpact = () => {
               </Card.Text>
             </Card.Body>
           </Card>
+        </Col>
       </Row>
 
       {/* Price Change Chart */}

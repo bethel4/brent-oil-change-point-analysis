@@ -78,7 +78,7 @@ class BayesianChangePointModel:
             Number of samples to draw from the posterior
         tune : int
             Number of tuning steps
-            
+        
         Returns:
         --------
         az.InferenceData
@@ -129,14 +129,21 @@ class BayesianChangePointModel:
         mu_2_samples = self.trace.posterior['mu_2'].values.flatten()
         sigma_samples = self.trace.posterior['sigma'].values.flatten()
         
+        # Ensure summary table is JSON-serializable
+        try:
+            summary_table = summary.astype(float).to_dict()
+        except Exception:
+            # Fallback to string conversion if casting fails
+            summary_table = summary.to_dict()
+        
         return {
-            'mu_1_mean': mu_1_samples.mean(),
-            'mu_1_std': mu_1_samples.std(),
-            'mu_2_mean': mu_2_samples.mean(),
-            'mu_2_std': mu_2_samples.std(),
-            'sigma_mean': sigma_samples.mean(),
-            'sigma_std': sigma_samples.std(),
-            'summary_table': summary
+            'mu_1_mean': float(mu_1_samples.mean()),
+            'mu_1_std': float(mu_1_samples.std()),
+            'mu_2_mean': float(mu_2_samples.mean()),
+            'mu_2_std': float(mu_2_samples.std()),
+            'sigma_mean': float(sigma_samples.mean()),
+            'sigma_std': float(sigma_samples.std()),
+            'summary_table': summary_table
         }
     
     def plot_trace(self):

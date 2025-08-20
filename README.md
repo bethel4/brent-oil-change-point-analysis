@@ -24,3 +24,97 @@
 - Correlation does not imply causation; other factors may influence oil prices.
 
 ---
+
+## Running the Dashboard (Backend + Frontend)
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+ and npm
+- Recommended: `conda` or `python3 -m venv`
+
+### 1) Backend (Flask API)
+
+From the project root:
+
+```bash
+# Create and activate a virtual environment (pick one)
+python3 -m venv .venv && source .venv/bin/activate
+# or with conda
+# conda env create -f environment.yml && conda activate brent-oil-change-point-analysis
+
+# Install backend dependencies
+pip install -r dashboard/backend/requirements.txt
+
+# Run the API
+python3 dashboard/backend/app.py
+```
+
+- Health check: `http://localhost:5000/api/health`
+- Data endpoints:
+  - `GET /api/data/oil-prices?start=YYYY-MM-DD&end=YYYY-MM-DD`
+  - `GET /api/data/oil-prices-stream` (NDJSON streaming)
+  - `GET /api/data/events`
+- Analysis endpoints:
+  - `POST /api/analysis/change-points` (JSON body: `{ "samples": 2000, "tune": 1000 }`)
+  - `GET /api/analysis/statistics`
+  - `GET /api/analysis/events-impact`
+- Visualization endpoints:
+  - `GET /api/visualization/price-timeline`
+  - `GET /api/visualization/change-point-analysis`
+
+### 2) Frontend (React UI)
+
+In a separate terminal:
+
+```bash
+cd dashboard/frontend
+npm install
+npm start
+```
+
+- Open the UI at `http://localhost:3000`
+- The frontend is configured with a development proxy to `http://localhost:5000` in `dashboard/frontend/package.json`.
+- To point the UI to a different API URL, set `REACT_APP_API_URL` before starting:
+
+```bash
+REACT_APP_API_URL=http://<your-api-host>:<port> npm start
+```
+
+### Running Tests
+
+```bash
+# From project root
+python3 -m pytest -q
+```
+
+### Troubleshooting
+- If the React dev server complains about missing `public/index.html` or `src/index.js`, ensure those files exist under `dashboard/frontend`.
+- If you see Ajv-related errors when starting the frontend, ensure the following are installed in `dashboard/frontend/package.json`:
+  - `"ajv": "^6.12.6"`
+  - `"ajv-keywords": "^3.5.2"`
+  Then run: `npm install` and `npm start`.
+- Backend CORS is enabled; if you host the API on another origin, keep `REACT_APP_API_URL` consistent.
+
+### Project Structure (Dashboard)
+
+```
+dashboard/
+  backend/
+    app.py
+    requirements.txt
+  frontend/
+    package.json
+    public/
+      index.html
+    src/
+      App.js
+      index.js
+      components/
+        Dashboard.js
+        PriceTimeline.js
+        ChangePointAnalysis.js
+        EventsImpact.js
+        Statistics.js
+      services/
+        apiService.js
+```
