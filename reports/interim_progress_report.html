@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interim Progress Report — Brent Oil Change Point Analysis</title>
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 24px; color: #222; }
+    h1, h2, h3 { margin: 0.6em 0 0.3em; }
+    h1 { font-size: 26px; }
+    h2 { font-size: 20px; border-bottom: 2px solid #eee; padding-bottom: 6px; }
+    h3 { font-size: 16px; }
+    .muted { color: #666; }
+    .tag { display: inline-block; padding: 2px 8px; border-radius: 12px; background: #eef3ff; color: #284b9e; font-size: 12px; margin-left: 8px; }
+    .ok { background: #e9f8ef; color: #1b6e3a; }
+    .warn { background: #fff6e5; color: #8a5a00; }
+    .err { background: #ffe9ea; color: #802024; }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .card { border: 1px solid #eee; border-radius: 8px; padding: 16px; background: #fff; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 0; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid #eee; vertical-align: top; }
+    th { background: #fafafa; font-weight: 600; }
+    ul { margin: 6px 0 0 18px; }
+    code { background: #f5f5f5; padding: 2px 6px; border-radius: 4px; }
+    .small { font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>
+    Brent Oil Change Point Analysis — Interim Progress Report
+    <span class="tag">HTML</span>
+  </h1>
+  <div class="muted small">Generated: <!--DATE-->2025-08-20<!--/DATE--></div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Executive Summary</h2>
+      <p>
+        The dashboard stack (Flask API + React UI) is now runnable locally. We implemented core
+        API endpoints for data, statistics, events impact, and change-point visualization. The
+        React application renders all pages, with fixes applied to build issues. We introduced
+        a resilient change-point pipeline using a fast <em>ruptures</em> fallback while keeping
+        the Bayesian PyMC3 path available behind a lazy import for compatible environments.
+      </p>
+      <ul>
+        <li><span class="tag ok">Done</span> Backend endpoints, absolute-path data loading, NDJSON streaming.</li>
+        <li><span class="tag ok">Done</span> Frontend components wired to APIs; build issues resolved.</li>
+        <li><span class="tag warn">Partial</span> Bayesian change-point via PyMC3 gated by environment; <em>ruptures</em> enabled by default.</li>
+        <li><span class="tag warn">Docs</span> Updated README with run instructions and troubleshooting.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Plan vs Progress (Day 1)</h2>
+      <table>
+        <thead>
+          <tr>
+            <th style="width:28%">Planned</th>
+            <th style="width:40%">What Happened</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Implement backend routes for data, events, statistics, and change-point analysis.</td>
+            <td>Created endpoints under <code>/api/data/*</code>, <code>/api/analysis/*</code>, and <code>/api/visualization/*</code>. Added streaming endpoint <code>/api/data/oil-prices-stream</code>.</td>
+            <td><span class="tag ok">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Wire React components to API and fix build.</td>
+            <td>Added missing React entry files, resolved Ajv dependency and JSX issues, verified pages render.</td>
+            <td><span class="tag ok">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Run tests and ensure green build.</td>
+            <td>All tests: 8 passed, 2 skipped. Minor warnings acknowledged.</td>
+            <td><span class="tag ok">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Bayesian change-point via PyMC3 in API.</td>
+            <td>Hit system-level Theano/NumPy conflicts. Implemented lazy import and robust <em>ruptures</em> fallback for production safety.</td>
+            <td><span class="tag warn">Partially done</span></td>
+          </tr>
+          <tr>
+            <td>Documentation for local run and troubleshooting.</td>
+            <td>README updated with backend/frontend steps, env vars, troubleshooting and structure.</td>
+            <td><span class="tag ok">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>Items Not Done & Why</h2>
+      <ul>
+        <li><strong>Default Bayesian inference in production route</strong>: blocked by Theano/NumPy BLAS and deprecations on host. Risk mitigated by <em>ruptures</em> fallback; Bayesian path remains available for containerized env.</li>
+        <li><strong>Real-time live price feed</strong>: postponed; requires external API key and data contracts.</li>
+        <li><strong>Auth & export (CSV/PDF)</strong>: not critical for first interim; scheduled next.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Rescheduling Plan</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Task</th>
+            <th>New Target</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Containerize backend for PyMC3 (conda + pinned NumPy, BLAS)</td>
+            <td>Day 2</td>
+            <td>Create <code>Dockerfile</code> with mamba/conda; run Bayesian route by default.</td>
+          </tr>
+          <tr>
+            <td>Export endpoints (CSV/PNG/PDF)</td>
+            <td>Day 2</td>
+            <td>CSV for data slices, PNG chart export, HTML-to-PDF for reports.</td>
+          </tr>
+          <tr>
+            <td>Live price integration (Alpha Vantage or EIA)</td>
+            <td>Day 3</td>
+            <td>Server-side poller + UI toggle; cache responses.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>What’s Done So Far (According to Plan)</h2>
+      <ul>
+        <li>API: health, oil prices (with <code>start</code>/<code>end</code> filters), events, statistics, events impact, change-point visualization.</li>
+        <li>Performance: timing decorator, cached summary, NDJSON streaming, absolute data paths.</li>
+        <li>Frontend: Dashboard, Timeline, Change Point Analysis, Events Impact, Statistics — all wired to API.</li>
+        <li>Tests: suite green locally (8 passed, 2 skipped).</li>
+        <li>Docs: updated <code>README.md</code> with setup and troubleshooting.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Plan to Improve the Project</h2>
+      <ul>
+        <li><strong>Reliability</strong>: containerized backend; CI to run tests; pin env in <code>environment.yml</code>.</li>
+        <li><strong>Performance</strong>: server-side pagination and down-sampling for large charts; cache hot queries; async tasks for heavy analysis.</li>
+        <li><strong>UX</strong>: date range filters, event-type toggles, loading skeletons, export buttons.</li>
+        <li><strong>Analytics</strong>: enable Bayesian by default in container; add credibility intervals and parameter summaries in UI.</li>
+        <li><strong>Data</strong>: add live-price adaptor (provider-agnostic) with local caching and backfill to CSV.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>Tasks To Be Done (Next)</h2>
+      <ul>
+        <li>Build Docker image with conda/pymc3 and BLAS to enable Bayesian path reliably.</li>
+        <li>Add export endpoints: <code>/api/export/data</code>, <code>/api/export/chart</code>, <code>/api/export/report</code>.</li>
+        <li>Frontend: add filters for date/event type across pages; expose export actions.</li>
+        <li>Live price integration with provider key via <code>.env</code> and server-side caching.</li>
+        <li>Observability: request timing surfacing in API responses and console, error logs.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>How To Run (Quick)</h2>
+      <ul>
+        <li><strong>Backend</strong>: <code>python3 dashboard/backend/app.py</code></li>
+        <li><strong>Frontend</strong>: <code>cd dashboard/frontend && npm start</code></li>
+        <li>Key endpoints: <code>/api/health</code>, <code>/api/data/oil-prices</code>, <code>/api/analysis/statistics</code>, <code>/api/visualization/change-point-analysis</code></li>
+      </ul>
+      <div class="small muted">Bayesian route will automatically fallback to ruptures if PyMC3 is unavailable in the host environment.</div>
+    </div>
+  </div>
+</body>
+</html> 

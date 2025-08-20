@@ -24,6 +24,22 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
+        "label": "stream_with_context",
+        "importPath": "flask",
+        "description": "flask",
+        "isExtraImport": true,
+        "detail": "flask",
+        "documentation": {}
+    },
+    {
         "label": "CORS",
         "importPath": "flask_cors",
         "description": "flask_cors",
@@ -109,6 +125,40 @@
         "documentation": {}
     },
     {
+        "label": "time",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "time",
+        "description": "time",
+        "detail": "time",
+        "documentation": {}
+    },
+    {
+        "label": "lru_cache",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "wraps",
+        "importPath": "functools",
+        "description": "functools",
+        "isExtraImport": true,
+        "detail": "functools",
+        "documentation": {}
+    },
+    {
+        "label": "ruptures",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "ruptures",
+        "description": "ruptures",
+        "detail": "ruptures",
+        "documentation": {}
+    },
+    {
         "label": "load_oil_data",
         "importPath": "data_loader",
         "description": "data_loader",
@@ -154,54 +204,6 @@
         "description": "data_loader",
         "isExtraImport": true,
         "detail": "data_loader",
-        "documentation": {}
-    },
-    {
-        "label": "BayesianChangePointModel",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "calculate_log_returns",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "BayesianChangePointModel",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "calculate_log_returns",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "associate_events_with_change_point",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
-        "documentation": {}
-    },
-    {
-        "label": "quantify_price_impact",
-        "importPath": "model",
-        "description": "model",
-        "isExtraImport": true,
-        "detail": "model",
         "documentation": {}
     },
     {
@@ -379,11 +381,70 @@
         "documentation": {}
     },
     {
+        "label": "BayesianChangePointModel",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_log_returns",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "associate_events_with_change_point",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "quantify_price_impact",
+        "importPath": "model",
+        "description": "model",
+        "isExtraImport": true,
+        "detail": "model",
+        "documentation": {}
+    },
+    {
+        "label": "timed",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def timed(func):\n    \"\"\"Simple timing decorator for instrumentation.\"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start_time_ms = time.time() * 1000.0\n        try:\n            return func(*args, **kwargs)\n        finally:\n            elapsed_ms = (time.time() * 1000.0) - start_time_ms\n            print(f\"[TIMED] {func.__name__} took {elapsed_ms:.1f} ms\")",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "get_price_summary_cached",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def get_price_summary_cached():\n    \"\"\"Cacheable summary for full oil price data (no filters).\"\"\"\n    global oil_df\n    if oil_df is None:\n        return {}\n    summary = {\n        'total_observations': len(oil_df),\n        'date_range': {\n            'start': oil_df['Date'].min().strftime('%Y-%m-%d'),\n            'end': oil_df['Date'].max().strftime('%Y-%m-%d')",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "detect_change_point_ruptures",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def detect_change_point_ruptures(log_returns: np.ndarray, dates: pd.Series) -> tuple:\n    \"\"\"Detect a single change point using ruptures (fast, no PyMC).\n    Returns (index, date).\n    \"\"\"\n    if len(log_returns) < 10:\n        return 0, dates.iloc[0]\n    algo = rpt.KernelCPD(kernel=\"rbf\").fit(log_returns)\n    # predict returns list of segment end indices; choose first split\n    bkps = algo.predict(n_bkps=1)\n    cp_idx = int(bkps[0] - 1) if bkps else int(len(log_returns) // 2)",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
         "label": "load_analysis_data",
         "kind": 2,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "def load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data\n        oil_df = preprocess_data(oil_df, calculate_returns=True)\n        print(\"Data loaded successfully!\")",
+        "peekOfCode": "def load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Build absolute paths to data directory regardless of current working directory\n        base_dir = os.path.dirname(__file__)\n        data_dir = os.path.abspath(os.path.join(base_dir, '..', '..', 'data'))\n        oil_path = os.path.join(data_dir, 'brent_oil_prices.csv')\n        events_path = os.path.join(data_dir, 'geopolitical_events.csv')\n        # Load data",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -392,7 +453,7 @@
         "kind": 2,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "def health_check():\n    \"\"\"Health check endpoint.\"\"\"\n    return jsonify({'status': 'healthy', 'message': 'Dashboard API is running'})\n@app.route('/api/data/oil-prices', methods=['GET'])\ndef get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Convert to JSON-serializable format\n    data = []",
+        "peekOfCode": "def health_check():\n    \"\"\"Health check endpoint.\"\"\"\n    return jsonify({'status': 'healthy', 'message': 'Dashboard API is running'})\n@app.route('/api/data/oil-prices', methods=['GET'])\n@timed\ndef get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Optional date filters",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -401,7 +462,16 @@
         "kind": 2,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "def get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Convert to JSON-serializable format\n    data = []\n    for _, row in oil_df.iterrows():\n        data.append({\n            'date': row['Date'].strftime('%Y-%m-%d'),\n            'price': float(row['Price']),",
+        "peekOfCode": "def get_oil_prices():\n    \"\"\"Get oil price data.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    # Optional date filters\n    start = request.args.get('start')\n    end = request.args.get('end')\n    df = oil_df\n    if start:\n        try:",
+        "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "stream_oil_prices",
+        "kind": 2,
+        "importPath": "dashboard.backend.app",
+        "description": "dashboard.backend.app",
+        "peekOfCode": "def stream_oil_prices():\n    \"\"\"Stream oil prices as NDJSON for large payloads. Supports optional start/end query params.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    start = request.args.get('start')\n    end = request.args.get('end')\n    df = oil_df\n    if start:\n        try:\n            start_dt = pd.to_datetime(start)",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -419,7 +489,7 @@
         "kind": 2,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "def run_change_point_analysis():\n    \"\"\"Run change point analysis and return results.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Get parameters from request\n        data = request.get_json() or {}\n        samples = data.get('samples', 2000)\n        tune = data.get('tune', 1000)\n        # Run Bayesian change point detection",
+        "peekOfCode": "def run_change_point_analysis():\n    \"\"\"Run change point analysis and return results.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Get parameters from request\n        data = request.get_json() or {}\n        samples = data.get('samples', 2000)\n        tune = data.get('tune', 1000)\n        # Prefer Bayesian if available; otherwise fallback to ruptures",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -455,7 +525,7 @@
         "kind": 2,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "def get_change_point_visualization():\n    \"\"\"Get data for change point analysis visualization.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Run a quick change point analysis for visualization\n        log_returns = oil_df['log_returns'].values\n        model = BayesianChangePointModel(log_returns, oil_df['Date'])\n        trace = model.fit(samples=1000, tune=500)  # Quick run for visualization\n        change_point_idx, change_point_date = model.get_change_point()",
+        "peekOfCode": "def get_change_point_visualization():\n    \"\"\"Get data for change point analysis visualization.\"\"\"\n    if oil_df is None:\n        return jsonify({'error': 'Data not loaded'}), 500\n    try:\n        # Fast change point analysis using ruptures (no heavy sampling)\n        log_returns = oil_df['log_returns'].values\n        change_point_idx, change_point_date = detect_change_point_ruptures(log_returns, oil_df['Date'])\n        # Prepare visualization data\n        before_data = oil_df.iloc[:change_point_idx]",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -464,7 +534,7 @@
         "kind": 5,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "app = Flask(__name__)\nCORS(app)  # Enable CORS for React frontend\n# Global variables to store loaded data\noil_df = None\nevents_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:",
+        "peekOfCode": "app = Flask(__name__)\nCORS(app)  # Enable CORS for React frontend\n# Global variables to store loaded data\noil_df = None\nevents_df = None\nmodel_results = None\ndef timed(func):\n    \"\"\"Simple timing decorator for instrumentation.\"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -473,7 +543,7 @@
         "kind": 5,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "oil_df = None\nevents_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')",
+        "peekOfCode": "oil_df = None\nevents_df = None\nmodel_results = None\ndef timed(func):\n    \"\"\"Simple timing decorator for instrumentation.\"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start_time_ms = time.time() * 1000.0\n        try:\n            return func(*args, **kwargs)",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -482,7 +552,7 @@
         "kind": 5,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "events_df = None\nmodel_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data",
+        "peekOfCode": "events_df = None\nmodel_results = None\ndef timed(func):\n    \"\"\"Simple timing decorator for instrumentation.\"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start_time_ms = time.time() * 1000.0\n        try:\n            return func(*args, **kwargs)\n        finally:",
         "detail": "dashboard.backend.app",
         "documentation": {}
     },
@@ -491,8 +561,44 @@
         "kind": 5,
         "importPath": "dashboard.backend.app",
         "description": "dashboard.backend.app",
-        "peekOfCode": "model_results = None\ndef load_analysis_data():\n    \"\"\"Load and preprocess analysis data.\"\"\"\n    global oil_df, events_df\n    try:\n        # Load data\n        oil_df = load_oil_data('../../data/brent_oil_prices.csv')\n        events_df = load_events_data('../../data/geopolitical_events.csv')\n        # Preprocess data\n        oil_df = preprocess_data(oil_df, calculate_returns=True)",
+        "peekOfCode": "model_results = None\ndef timed(func):\n    \"\"\"Simple timing decorator for instrumentation.\"\"\"\n    @wraps(func)\n    def wrapper(*args, **kwargs):\n        start_time_ms = time.time() * 1000.0\n        try:\n            return func(*args, **kwargs)\n        finally:\n            elapsed_ms = (time.time() * 1000.0) - start_time_ms",
         "detail": "dashboard.backend.app",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "description": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "description": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "description": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "description": "dashboard.frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "dashboard.frontend.node_modules.flatted.python.flatted",
         "documentation": {}
     },
     {
